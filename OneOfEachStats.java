@@ -13,17 +13,44 @@ public class OneOfEachStats {
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
-		
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
-		    
+        Random generator = new Random(seed);
+		double rand =0;
+		boolean boy = false;
+		boolean girl = false;
+		int count = 0;
+		int fam2 = 0, fam3 = 0, fam4 =0;
+		double averg = 0;
+		int countT = 0;
+		while(T != countT){
+			boy = false;
+			girl = false;
+			count = 0;
+			while(boy != true || girl != true){
+				rand = generator.nextDouble();
+				if(rand<0.5){
+					boy =true;
+				}
+				else{
+					girl = true;
+				}
+				count++;
+			}
+			if(count == 2){
+				fam2++;
+			}
+			else if(count == 3){
+				fam3++;
+			}
+			else{
+				fam4++;
+			}
+			averg = averg + count;
+			countT++;
+		}
+		averg = averg / T;
+		System.out.println("Average: "+ averg+" children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: "+fam2);
+		System.out.println("Number of families with 3 children: "+fam3);
+		System.out.println("Number of families with 4 or more children: "+fam4); 
 	}
 }
