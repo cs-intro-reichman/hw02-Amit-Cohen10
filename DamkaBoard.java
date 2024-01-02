@@ -7,11 +7,11 @@ public class DamkaBoard {
 		for(int i=1; i<=damkarow; i++){
 			for(int j=1; j<=damkarow; j++){
 				if(i%2==1){
-					if(j==1){
-						System.out.print("*");
+					if(i==1){
+						System.out.print("* ");
 					}
 					else{
-						System.out.print(" *");
+						System.out.print("* ");
 					}
 				}
 				else{
