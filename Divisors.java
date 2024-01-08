@@ -5,6 +5,7 @@ public class Divisors {
 	public static void main (String[] args) {
 		int divisor = Integer.parseInt(args[0]);
 		int i=1;
+		// TODO: Break line here
 		while (i<=divisor){
 			if (divisor % i ==0){
 				System.out.println(i);
