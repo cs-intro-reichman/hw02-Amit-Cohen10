@@ -22,6 +22,7 @@ public class OneOfEachStats {
 		double averg = 0;
 		int countT = 0;
 		while(T != countT){
+			// TODO: declare boy, girl and count here, not outside. You use them only on this scope
 			boy = false;
 			girl = false;
 			count = 0;

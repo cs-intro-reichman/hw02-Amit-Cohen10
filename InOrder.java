@@ -6,9 +6,10 @@ import java.util.Random;
 public class InOrder {
 	public static void main (String[] args) {
 		Random rand = new Random();
-		int randomnum = rand.nextInt(10);
+		int randomnum = rand.nextInt(10); // TODO use camelCase...randomNum
 		System.out.print(randomnum+"");
 		int newrandom = rand.nextInt(10);
+		// TODO: break lines sometimes. It will make the code more readable
 		while(newrandom>=randomnum){
 			System.out.print(" "+newrandom+"");
 			randomnum = newrandom;
